@@ -1,5 +1,7 @@
 # test && commit || revert
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/heymatthew/tcr)](https://goreportcard.com/report/github.com/go-git/go-git)
+
 Test, commit on success, reset on failure. This workflow was pioneered by Kent Beck in 2019.
 
 https://www.youtube.com/watch?v=FFzHOyFeovE
