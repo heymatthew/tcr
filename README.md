@@ -18,3 +18,10 @@ The 'test' step is tricky. I'd really like a command which
 
 This command should not commit your changes. Changes are added to the staging area and can be
 committed when the user is ready using `git commit`
+
+# Usage [draft]
+
+```sh
+tcr -c 'go test'
+tcr -c 'bundle exec rspec'
+```
