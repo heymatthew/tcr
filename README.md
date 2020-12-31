@@ -1,6 +1,8 @@
 # test && commit || revert
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/heymatthew/tcr)](https://goreportcard.com/report/github.com/go-git/go-git)
+[![Maintainability](https://api.codeclimate.com/v1/badges/2161eb11259c773f1e61/maintainability)](https://codeclimate.com/github/heymatthew/tcr/maintainability)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fheymatthew%2Ftcr%2Fbadge%3Fref%3Dmaster&style=flat)](https://actions-badge.atrox.dev/heymatthew/tcr/goto?ref=master)
 
 Test, commit on success, reset on failure. This workflow was pioneered by Kent Beck in 2019.
 
