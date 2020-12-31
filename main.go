@@ -2,23 +2,25 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"os"
 	"os/exec"
+	"strings"
 )
 
 func main() {
 	testCommand := flag.String("c", "go test", "test command")
 	flag.Parse()
-	fmt.Println("Test command:", *testCommand)
-	err := run("git", "status")
+	err := run(*testCommand)
 	if err != nil {
-		panic(err)
+		run("git checkout .")
+	} else {
+		run("git add .")
 	}
 }
 
-func run(runnable string, args ...string) error {
-	cmd := exec.Command(runnable, args...)
-	cmd.Stdout = os.Stdout
-	return cmd.Run()
+func run(cmd string) error {
+	runnable := strings.Split(cmd, " ")
+	runner := exec.Command(runnable[0], runnable[1:]...)
+	runner.Stdout = os.Stdout
+	return runner.Run()
 }
